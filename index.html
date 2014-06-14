@@ -1,0 +1,49 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>wifi rgb</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="stylesheet" href="styles/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/ui-lightness/jquery-ui-1.10.4.css">
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="container">
+            <div class="header">
+                <h3 class="text-muted">wifi RGB v0.2</h3>
+            </div>
+
+            <div class="row marketing">
+                <div class="col-xs-4 center" data-ip="unit01.local" data-timeout="201">
+                    <h4>Lamp 1</h4>
+                    <div>
+                        <div class="timeout">fade-timeout: <span>200</span></div>
+                        <div class="slider"></div>
+                    </div>
+                    <a href="#" class="btn btn-lg btn-danger" data-red="255" data-green="0" data-blue="0">rood</a>
+                    <a href="#" class="btn btn-lg btn-success" data-red="0" data-green="255" data-blue="0">groen</a>
+                    <a href="#" class="btn btn-lg btn-info" data-red="0" data-green="0" data-blue="255">blauw</a>
+                    <a href="#" class="btn btn-lg btn-default" data-red="255" data-green="255" data-blue="255">wit</a>
+                    <a href="#" class="btn btn-lg btn-default" data-red="255" data-green="255" data-blue="0" style="background-color: #ffff00; color: #000000">geel</a>
+                    <a href="#" class="btn btn-lg btn-default" data-red="80" data-green="0" data-blue="80" style="background-color: #800080; color: #ffffff">purper</a>
+                    <a href="#" class="btn btn-lg btn-default" data-red="0" data-green="0" data-blue="0"style="background-color: #000000; color: #ffffff">uit</a>
+                </div>
+                <div class="col-xs-4 center" data-ip="yun02.local">
+                    <h4>Lamp 2</h4>
+                </div>
+            </div>
+        </div>
+
+        <script src="scripts/jquery.min.js"></script>
+        <script src="scripts/jquery-ui-1.10.4.min.js"></script>
+        <script src="scripts/bootstrap.min.js"></script>
+        <script src="scripts/main.js"></script>
+</body>
+</html>
