@@ -52,7 +52,9 @@ void loop() {
   YunClient client = server.accept();
 
   // iemand verbonden?
-  if (client) {    
+  if (client) {
+    client.setTimeout(5);
+    
     Serial.println("client!");
     // nakijken dat commando met led begint
     String command = client.readStringUntil('/');
