@@ -17,16 +17,13 @@ $( document ).ready(function() {
     locksliders.click(function (e) {
     	e.preventDefault();
     	var secondary = $('.secondary');
-    	var modus = $('#modus');
 
     	if (lockState) {
     		secondary.show();
-			modus.html('');
 			locksliders.html('start simultane modus');
     		lockState = false;
     	} else {
     		secondary.hide();
-			modus.html('simultane modus actief');
 			locksliders.html('beëindig simultane modus');
     		lockState = true;
     	}
