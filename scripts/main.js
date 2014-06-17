@@ -49,19 +49,22 @@ $( document ).ready(function() {
 			arduinoURLs.push('http://' + adres + '/arduino/led/');
 		}
 
-		$.each( arduinoURLs, function( key, arduinoURL ) {
-			$.ajax({
-				url: arduinoURL + timeout + '/' + red + '/' + green + '/' + blue + '/',
-				dataType: 'jsonp',
-				jsonp: 'jsonp',
-				beforeSend: function( xhr ) {
-					console.log(xhr);
-				},
-				success: function (e) {
-					var response = jQuery.parseJSON(e);
-					console.log(response.status);
-				}
+		for (var j = 0;j<=1;j++) {
+			$.each( arduinoURLs, function( key, arduinoURL ) {
+				$.ajax({
+					url: arduinoURL + timeout + '/' + red + '/' + green + '/' + blue + '/',
+					dataType: 'jsonp',
+					jsonp: 'jsonp',
+					beforeSend: function( xhr ) {
+						console.log(xhr);
+					},
+					success: function (e) {
+						var response = jQuery.parseJSON(e);
+						console.log(response.status);
+					}
+				});
+
 			});
-		});
+		}	
     });
 });
