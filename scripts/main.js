@@ -35,6 +35,7 @@ $( document ).ready(function() {
 		var red = $(this).attr('data-red');
 		var green = $(this).attr('data-green');
 		var blue = $(this).attr('data-blue');
+		var effect = $(this).parent().find('.effect:checked').val();
 		var timeout = $(this).parent().attr('data-timeout');
 
 		var arduinoURLs = [];
@@ -52,7 +53,7 @@ $( document ).ready(function() {
 		for (var j = 0;j<=1;j++) {
 			$.each( arduinoURLs, function( key, arduinoURL ) {
 				$.ajax({
-					url: arduinoURL + timeout + '/' + red + '/' + green + '/' + blue + '/',
+					url: arduinoURL + timeout + '/' + red + '/' + green + '/' + blue + '/' + effect + "/",
 					dataType: 'jsonp',
 					jsonp: 'jsonp',
 					beforeSend: function( xhr ) {
@@ -63,7 +64,6 @@ $( document ).ready(function() {
 						console.log(response.status);
 					}
 				});
-
 			});
 		}	
     });
